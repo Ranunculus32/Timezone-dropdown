@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.36/moment-timezone-with-data.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Family timezone</title>
+  </head>
+
+  <body>
+  <!-- <div class="container">
+    <h1 class="text-center mt-5">Family Clock</h1>
+    <p class="date text-center" id="current-date"></p>
+    <form action="">
+      <label class="form-label" for="timezone">Find your city</label>
+      <select class="form-select" id="timezone">
+        <option value="">Pick</option>
+        <option value="current-location">My current location</option>
+        <option value="charlyn">🇫🇮 Charlyn</option>
+        <option value="grace">🇨🇾 Grace</option>
+        <option value="christine">🇸🇪 Christine</option>
+        <option value="jonathan">🇦🇺 Jonathan</option>
+        <option value="ryan">🇮🇪 Ryan</option>
+        <option value="mark">🇵🇭 Mark</option>
+      </select>
+    </form>
+    <div id="container"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+  <script src="index.js"></script>
+</body> -->
+
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5">Family Clock</h1>
+      <p class="date text-center" id="current-date"></p>
+      <form action="">
+        <label class="form-label" for="timezone">Find your city</label>
+        <select class="form-select" id="timezone">
+          <option value="">Pick</option>
+          <option value="current-location">My current location</option>
+          <option value="charlyn">🇫🇮 Charlyn</option>
+          <option value="grace">🇨🇾 Grace</option>
+          <option value="christine">🇸🇪 Christine</option>
+          <option value="jonathan">🇦🇺 Jonathan</option>
+          <option value="ryan">🇮🇪 Ryan</option>
+          <option value="mark">🇵🇭 Mark</option>
+        </select>
+      </form>
+      <div class=" display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="current-location">
+              <h2 class="person" id="current"></h2>
+              <p class="city" id="current-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="current-hour">
+                <span class="am-pm" id="current-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="charlyn-time display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="charlyn-city">
+              <h2 class="person" id="charlyn"></h2>
+              <p class="city" id="charlyn-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="charlyn-hour">
+                <span class="am-pm" id="charlyn-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grace-time display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="grace-city">
+              <h2 class="person" id="grace"></h2>
+              <p class="city" id="grace-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="grace-hour">
+                <span class="am-pm" id="grace-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="christine-time display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="christine-city">
+              <h2 class="person" id="christine"></h2>
+              <p class="city" id="christine-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="christine-hour">
+                <span class="am-pm" id="christine-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jonathan-time display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="jonathan-city">
+              <h2 class="person" id="jonathan"></h2>
+              <p class="city" id="jonathan-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="jonathan-hour">
+                <span class="am-pm" id="jonathan-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ryan-time display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="ryan-city">
+              <h2 class="person" id="ryan"></h2>
+              <p class="city" id="ryan-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="ryan-hour">
+                <span class="am-pm" id="ryan-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mark-time display-container bg-light p-3 mb-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="display-city" id="mark-city">
+              <h2 class="person" id="mark"></h2>
+              <p class="city" id="mark-city"></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="display-time text-center">
+              <h2 class="hour" id="mark-hour">
+                <span class="am-pm" id="mark-am-pm"></span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    
+    </div>
+  </body>
+</html>
