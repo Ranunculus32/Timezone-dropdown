@@ -15,7 +15,7 @@ document
         displayFamilyMember(
           "🇫🇮 Charlyn",
           "Europe/Helsinki",
-          "Espoo, Finland",
+          "Helsinki, Finland",
           "charlyn",
           "charlyn-city",
           "charlyn-hour",
